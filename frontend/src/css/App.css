@@ -1,0 +1,281 @@
+.tks,
+.wq,
+.pp {
+  will-change: transform;
+}
+
+input[disabled],
+button[disabled] {
+  pointer-events: none;
+}
+
+.App {
+  background-color: #62ff86;
+  --green-background: #62ff82;
+  --alt-green-background: #62ff82;
+  --green-dark: #40a758;
+  --green-light: #71ff9a;
+  --text-color: #000;
+}
+
+.App.dark {
+  background-color: #3b3b3b;
+  --green-background: #3b3b3b;
+  --alt-green-background: #41684c;
+  --green-dark: #2d2a2a;
+  --green-light: #515151;
+  --text-color: #71ff9a;
+}
+
+.icon-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 13px;
+}
+.colorable {
+  color: var(--text-color);
+}
+.icon-btn .icon {
+  width: 30px;
+  height: 30px;
+}
+
+.input-container,
+.icon-btn,
+.btn {
+  will-change: box-shadow;
+}
+
+.btn {
+  height: 50px;
+  width: 200px;
+}
+.input-container,
+.btn {
+  border-radius: 15px;
+}
+
+.btn.block {
+  width: 100%;
+}
+
+.pay-input {
+  width: 250px;
+  height: 70px;
+  border-radius: 20px;
+}
+.pay-input span,
+.pay-input input {
+  font-size: 45px;
+}
+
+.pay-input input {
+  text-align: right;
+  padding-right: 8px;
+}
+
+.pay-btn {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+}
+.pay-btn .icon {
+  width: 40px;
+  height: 40px;
+}
+
+.toast {
+  top: 15px;
+  left: 0;
+  right: 0;
+}
+.toast-bar {
+  width: 10px;
+  height: auto;
+}
+
+.max-width {
+  width: 100vw;
+  max-width: 400px;
+}
+
+.handle-input {
+  max-width: 280px;
+}
+
+.regular-soft {
+  background-color: var(--green-background);
+  box-shadow: -2px 2px 5px var(--green-dark), 2px -2px 5px var(--green-light);
+}
+
+.regular-soft:hover {
+  box-shadow: -2.5px 2.5px 6px var(--green-dark),
+    2px -2px 4px var(--green-light);
+}
+
+.regular-soft:active {
+  box-shadow: -1.5px 1.5px 3px var(--green-dark),
+    2px -2px 3px var(--green-light);
+}
+
+.alt-soft {
+  background-color: var(--green-background);
+  box-shadow: -3px 3px 5px var(--green-dark), 2px -2px 5px var(--green-light);
+}
+
+.alt-soft:hover {
+  box-shadow: -3.5px 3.5px 7px var(--green-dark),
+    2px -2px 4px var(--green-light);
+}
+.alt-soft:active {
+  box-shadow: -2px 2px 4px var(--green-dark), 2px -2px 3px var(--green-light);
+}
+
+.in-regular-soft {
+  background-color: var(--green-background);
+  box-shadow: inset -2px 2px 7px var(--green-dark),
+    inset 3px -3px 7px var(--green-light);
+}
+.in-alt-soft {
+  background-color: var(--green-background);
+  box-shadow: inset -3px 3px 8px var(--green-dark),
+    inset 3px -3px 5px var(--green-light);
+}
+
+.in-regular-soft.focus {
+  box-shadow: inset -3px 2px 9px var(--green-dark),
+    inset 3px -3px 7px var(--green-light);
+}
+
+.in-alt-soft.focus {
+  box-shadow: inset -4px 4px 12px var(--green-dark),
+    inset 3px -3px 5px var(--green-light);
+}
+.tks {
+  top: -40px;
+}
+
+.wq {
+  top: -30px;
+}
+
+.right {
+  animation: fromRight 400ms ease-out;
+}
+.left {
+  animation: fromLeft 400ms ease-out;
+}
+
+.fadeIn {
+  animation: fadeIn 1200ms ease-out forwards;
+}
+
+@keyframes fromRight {
+  from {
+    transform: translateX(50vw);
+    opacity: 0;
+  }
+}
+@keyframes fromLeft {
+  from {
+    transform: translateX(-50vw);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+}
+
+.StripeElement {
+  border-radius: 18px;
+  padding: 12px;
+  outline: 0;
+  background-color: var(--green-background);
+  border: none;
+  box-shadow: inset -2px 2px 7px var(--green-dark),
+    inset 3px -3px 7px var(--green-light);
+}
+
+.theme-toggle-container {
+  right: 10px;
+  top: 10px;
+}
+.side-toggle-container {
+  top: 10px;
+  left: 10px;
+}
+
+.switch {
+  width: 60px;
+  height: 35px;
+  border-radius: 30px;
+  background-color: var(--alt-green-background);
+}
+
+.toggle-ball {
+  width: 35px;
+  height: 35px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  transition: left 250ms ease-out;
+}
+
+.App.dark .toggle-ball {
+  left: 20px;
+}
+
+.toggle-icon {
+  width: 20px;
+  height: 20px;
+  opacity: 0.4;
+  margin-bottom: 1px;
+}
+
+.App.dark .toggle-icon {
+  opacity: 1;
+}
+
+.side {
+  width: 275px;
+  height: 100%;
+}
+
+.input-container.focus .prefix {
+  opacity: 1;
+}
+.prefix {
+  opacity: 0.5;
+  transition: opacity linear 250ms;
+}
+
+.checkbox {
+  width: 22px;
+  height: 22px;
+  border-radius: 5px;
+  background-color: var(--green-background);
+  box-shadow: inset -1px 1px 5px var(--green-dark),
+    inset 1px -1px 3px var(--green-light);
+}
+.checkbox.checked {
+  background-color: var(--text-color);
+  box-shadow: unset;
+}
+
+.checkbox.checked .checkbox-check {
+  display: block;
+  color: var(--green-background);
+}
+
+.checkbox-check {
+  width: 20px;
+  height: 20px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}

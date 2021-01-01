@@ -1,0 +1,36 @@
+/****/
+.c-white {
+  color: #fff;
+}
+.b-white {
+  background-color: #fff;
+}
+.bd-white {
+  border-color: #fff;
+}
+
+/****/
+.c-black {
+  color: #000;
+}
+.b-black {
+  background-color: #000;
+}
+.bd-black {
+  border-color: #000;
+}
+
+/****/
+.c-red {
+  color: red !important;
+}
+.b-red {
+  background-color: red;
+}
+.bd-red {
+  border-color: red;
+}
+
+.App.dark .c-red {
+  color: #ff5e5e !important;
+}
