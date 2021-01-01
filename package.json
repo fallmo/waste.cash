@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "clear": "rm -rf build",
+    "clear": "rm -rf build && rm -rf lambda",
     "react": "npm run build --prefix=./frontend && mv ./frontend/build .",
-    "lambda": "cd backend && npm run lambda-build && mv lambda .. &&  cp netlify.toml ..",
+    "lambda": "cd backend && npm run lambda-build && mv lambda ..",
     "build": "npm run clear && npm run react && npm run lambda"
   },
   "author": "",

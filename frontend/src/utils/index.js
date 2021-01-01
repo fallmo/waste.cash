@@ -1,3 +1,5 @@
+const endpoint = process.env.NODE_ENV === "production" ? "/.netlify/functions" : "http://localhost:9000"
+
 export const validateCash = cash => {
   const errors = {
     small: "Amount too small",
@@ -13,7 +15,7 @@ export const validateCash = cash => {
 
 export const attemtPayment = async (id, amount) => {
   try{
-    const resp = await fetch('/payment', {
+    const resp = await fetch(`${endpoint}/payment`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -34,7 +36,7 @@ export const attemtPayment = async (id, amount) => {
 
 export const saveHandle = async handle => {
   try{
-    const resp = await fetch('/handle', {
+    const resp = await fetch(`${endpoint}/handle`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
